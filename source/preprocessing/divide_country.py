@@ -2,7 +2,6 @@ import pandas as pd
 
 data = pd.read_csv('./data/country/all.csv')
 
-
 # divide the data into groups by country
 def divideCountry():
   country = data['country'].unique()
