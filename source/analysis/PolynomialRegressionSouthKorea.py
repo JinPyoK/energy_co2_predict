@@ -9,7 +9,7 @@ df = pd.read_csv('data\\country_scaled\\South Korea_scaled.csv')
 
 # set column X and y
 X = df[['Year']]
-y = df['Average CO2 emission factor (tCO2/toe)']
+y = df['CO2 emissions from fuel combustion (MtCO2)']
 
 # transform X for polynomial regression
 poly_degree = 2
@@ -38,6 +38,6 @@ equation = f'y = {slope:.2f}x + {intercept:.2f}'
 plt.scatter(X, y, color='blue')
 plt.plot(X, y_pred, color='red')
 plt.title('Polynomial Regression')
-plt.xlabel('X')
-plt.ylabel('y')
+plt.xlabel('Year')
+plt.ylabel('CO2 emissions from fuel combustion (MtCO2)')
 plt.show()

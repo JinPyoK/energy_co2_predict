@@ -11,7 +11,8 @@ df = pd.read_csv('data\\worldwide\\yearly_scaled2.csv')
 
 # set column X and y
 X = df[['Total energy consumption (Mtoe)']]
-y = df['Average CO2 emission factor (tCO2/toe)']
+# X = df[['Total energy production (Mtoe)']]
+y = df['CO2 emissions from fuel combustion (MtCO2)']
 
 # transform X for polynomial regression
 poly_degree = 2
@@ -42,7 +43,7 @@ plt.scatter(X, y, color='blue')
 plt.plot(X, y_pred, color='red')
 plt.title('Polynomial Regression')
 plt.xlabel('Total energy consumtion (Mtoe)')
-plt.ylabel('Average CO2 emission factor')
+plt.ylabel('CO2 emissions from fuel combustion (MtCO2)')
 plt.show()
 # Plotting the actual vs predicted values
 # fig = plt.figure(figsize=(12, 8))
